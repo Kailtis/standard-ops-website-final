@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom"; // Import Link
 import { motion, AnimatePresence } from "framer-motion"; // Import AnimatePresence
 import { Button } from "@/components/ui/button";
 import { MagneticButton } from "@/components/ui/magnetic-button";
 
 const navLinks = [
-  { href: "#how-it-works", label: "How it Works" },
-  { href: "#features", label: "Features" },
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#blog", label: "Blog" }, // Assuming blog section exists or will be added
+  { href: "/#how-it-works", label: "How it Works" }, // Added /
+  { href: "/#features", label: "Features" }, // Added /
+  { href: "/#testimonials", label: "Testimonials" }, // Added /
+  // { href: "#pricing", label: "Pricing" }, // Removed Pricing link
+  { href: "/#faq", label: "FAQ" }, // Added /
+  { href: "/blog", label: "Blog" }, // This one stays as is
 ];
 
 const Navbar = () => {
@@ -48,9 +49,11 @@ const Navbar = () => {
           transition={{ delay: 0.2 }}
           className="flex items-center"
         >
-          <span className="text-2xl font-heading font-bold bg-gradient-to-r from-standardOps-purple to-[#FF7E5F] bg-clip-text text-transparent">
-            Standard Ops
-          </span>
+          <Link to="/" className="flex items-center"> {/* Wrap logo in Link */}
+            <span className="text-2xl font-heading font-bold bg-gradient-to-r from-standardOps-purple to-[#FF7E5F] bg-clip-text text-transparent">
+              Standard Ops
+            </span>
+          </Link>
         </motion.div>
 
         <motion.nav
@@ -77,12 +80,13 @@ const Navbar = () => {
                   />
                 )}
               </AnimatePresence>
-              <a 
-                href={link.href} 
+              {/* Use Link component for internal navigation */}
+              <Link
+                to={link.href}
                 className="text-white/80 hover:text-white transition-colors relative z-10 text-sm" // Added relative z-10 and text-sm
               >
                 {link.label}
-              </a>
+              </Link>
             </div>
           ))}
         </motion.nav>

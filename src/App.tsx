@@ -5,6 +5,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+// Placeholder imports for blog pages
+import BlogPage from "./pages/BlogPage"; // Assuming path, will create later
+import BlogPostPage from "./pages/BlogPostPage"; // Assuming path, will create later
 
 const queryClient = new QueryClient();
 
@@ -16,6 +19,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

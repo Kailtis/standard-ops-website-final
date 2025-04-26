@@ -72,19 +72,7 @@ const HeroSection = () => {
             </a>
           </motion.div>
 
-          {/* Privacy text */}
-          <motion.p initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6,
-          delay: 0.8
-        }} className="text-sm text-white/60">
-            We care about your data in our <a href="#" className="text-standardOps-purple underline">privacy policy</a>.
-          </motion.p>
+          {/* Privacy text removed */}
 
           {/* Trust badges */}
           <motion.div initial={{

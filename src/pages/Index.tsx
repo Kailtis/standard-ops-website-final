@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"; // Added React import
+import { useLocation } from "react-router-dom"; // Import useLocation
 import ParticleBackground from "@/components/ParticleBackground";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
@@ -13,24 +14,35 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  const location = useLocation(); // Get location object
+
   useEffect(() => {
     // Update page title
     document.title = "Standard Ops | AI Automation Agency";
-    
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
+  }, []); // Run only once on mount for title
+
+  // Effect to handle scrolling to hash sections
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      // Use setTimeout to allow elements to render after navigation
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          // Calculate offset, potentially adjusting for fixed navbar height
+          const navbar = document.querySelector('header'); // Select the header element
+          const navbarHeight = navbar ? navbar.offsetHeight : 0; // Get its height, default to 0
+          const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+          const offsetPosition = elementPosition - navbarHeight - 20; // Subtract navbar height and add some padding (e.g., 20px)
+
           window.scrollTo({
-            top: target.offsetTop,
-            behavior: 'smooth'
+            top: offsetPosition,
+            behavior: "smooth"
           });
         }
-      });
-    });
-  }, []);
+      }, 100); // Small delay
+    }
+  }, [location.hash]); // Re-run only if the hash changes
 
   // Demo data for Pricing Section
   const demoPlans = [
@@ -111,8 +123,8 @@ const Index = () => {
       answer: "Absolutely. We prioritize seamless integration. Our solutions are designed to work with popular CRMs, email marketing platforms, and other tools commonly used by agencies. We'll confirm compatibility and map out the integration plan during the strategy phase.",
     },
     {
-      question: "What does the monthly support fee cover after the initial setup?",
-      answer: "The monthly fee ensures your automation systems run smoothly and stay optimized. It includes ongoing monitoring, technical support, performance analysis, and proactive adjustments to improve results and adapt to any changes in your business or the market.",
+      question: "What is your pricing structure?",
+      answer: "Given the personalize nature of our work that caters to each client specific need, we didn't feel comfortable advertising a clear pricing structure in our website, because that would be misleading. You can be assured that whatever it ends up being with you, it will be absolutely fair and reflective of the value provided to your company. If you absolutely wish to know, you can send us an email at 'support@standardops.dev' and we'll do our best to give you more information. Some clients projects are low 4 figures, some are high 4, some are low 5. It mostly depends on the scope and nature of the project. We hope this was satisfactory as a response.",
     },
   ];
 
@@ -123,9 +135,10 @@ const Index = () => {
       <main>
         <HeroSection />
         <ServicesSection />
-        <HowItWorks />
+        <HowItWorks /> {/* Remove incorrect id prop */}
         {/* Pass required props */}
-        <TestimonialsSection 
+        <TestimonialsSection
+          // Remove incorrect id prop
           title="Success Stories from Our Clients"
           description="Hear from businesses that simplified their ops, reclaimed valuable time, and improved efficiency thanks to our solutions."
           testimonials={testimonialsData}
@@ -133,9 +146,11 @@ const Index = () => {
         {/* PricingSection removed */}
 
         {/* Removed ShiftingLandscapeSection, QuantifiableImpactSection, FutureReadySection */}
-        
+        {/* Assuming Features section would be part of Services or another component */}
+        {/* Add id="features" to the relevant section component if it exists */}
+
         <FaqSection
-          id="faq" // Added ID for navigation link
+          id="faq" // ID already exists
           title="Frequently Asked Questions"
           description="Everything you need to know about our platform"
           items={DEMO_FAQS}

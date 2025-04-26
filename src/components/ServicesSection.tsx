@@ -34,9 +34,7 @@ const ServiceCard = ({
       </div>
       <h3 className="text-xl font-heading font-bold mb-4">{title}</h3>
       <p className="text-white/70 mb-6">{description}</p>
-      <a href="#" className="inline-flex items-center text-standardOps-purple hover:text-standardOps-purple-light gap-2 group-hover:gap-3 transition-all duration-300">
-        Learn more <ArrowRight className="w-4 h-4" />
-      </a>
+      {/* Learn more link removed */}
     </GlareCard>
   </motion.div>;
 };
