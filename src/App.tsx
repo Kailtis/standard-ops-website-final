@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 // Placeholder imports for blog pages
 import BlogPage from "./pages/BlogPage"; // Assuming path, will create later
 import BlogPostPage from "./pages/BlogPostPage"; // Assuming path, will create later
+import { Analytics } from "@vercel/analytics/react";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <Analytics />
     </TooltipProvider>
   </QueryClientProvider>
 );
