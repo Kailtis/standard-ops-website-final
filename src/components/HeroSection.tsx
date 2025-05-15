@@ -34,8 +34,8 @@ const HeroSection = () => {
           duration: 0.6,
           delay: 0.2
         }} className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight">
-            People who care <br />
-            <span className="gradient-text">about your growth</span>
+            Powerful Sales and Marketing AI Automations. <br />
+            <span className="gradient-text">For B2B Agencies.</span>
           </motion.h1>
 
           {/* Description */}
@@ -49,8 +49,7 @@ const HeroSection = () => {
           duration: 0.6,
           delay: 0.4
         }} className="text-xl text-white/80">
-            Powerful, AI-powered sales and marketing automation solutions to help agency owners
-            simplify business growth.  <br />  <br />So that you can reclaim your time, boost productivity, and improve ROI across your sales and marketing departments.
+            Stop the feast-or-famine cycle. Our intelligent systems deliver a predictable stream of qualified leads directly to your agency, so you can focus on client work and sustainable growth, not chasing new business.
           </motion.p>
 
           {/* Email input and CTA */}
@@ -67,7 +66,7 @@ const HeroSection = () => {
             
             <a href="https://cal.com/safouan-chbabi/standardops-strategy" target="_blank" rel="noopener noreferrer">
               <MagneticButton>
-                <button className="cta-button">Book your free Strategy Consultation</button>
+                <button className="cta-button">Book Your Free Growth Strategy Session</button>
               </MagneticButton>
             </a>
           </motion.div>

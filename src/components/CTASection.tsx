@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Meteors } from "@/components/ui/meteors"; // Import Meteors
 import { MagneticButton } from "@/components/ui/magnetic-button"; // Corrected: Named import
@@ -20,18 +19,18 @@ const CTASection = () => {
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-standardOps-purple via-standardOps-purple-light to-[#FF7E5F]"></div>
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6">
-            Ready to <span className="gradient-text">Reclaim Your Time</span>?
+            Stop Worrying About Leads. <span className="gradient-text">Start Growing Your Agency.</span>
           </h2>
           
           <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto">
-            Join tens of agencies that have transformed their operations with Standard Ops' automation solutions.
+            Let us build and manage your client acquisition system. Get a predictable stream of qualified leads and focus on what you do best: delivering for your B2B clients. {/* Removed DFY */}
           </p>
 
           <div className="flex justify-center"> {/* Removed gap and flex-col/sm:flex-row */}
           <a href="https://cal.com/safouan-chbabi/standardops-strategy" target="_blank" rel="noopener noreferrer">
             <MagneticButton>
               <button className="cta-button">
-                Schedule a Demo
+                Book Your Free Growth Strategy Session
               </button>
             </MagneticButton>
           </a>

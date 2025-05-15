@@ -107,24 +107,24 @@ const Index = () => {
   // Updated FAQ Data
   const DEMO_FAQS = [
     {
-      question: "What specific problems does Standard Ops solve for agencies?",
-      answer: "Standard Ops tackles common agency bottlenecks like inefficient lead generation, time-consuming manual sales tasks, inconsistent marketing follow-up, and difficulty scaling operations. Our AI automation solutions streamline these processes, freeing up your team to focus on high-value activities and client relationships.",
+      question: "What exactly does Standard Ops do for B2B agencies like mine?",
+      answer: "We solve your biggest client acquisition challenge: the 'feast or famine' cycle. Our intelligent, managed systems deliver a consistent stream of qualified leads directly to your B2B agency, so you can focus on client work, not chasing new business." // Removed DFY
     },
     {
-      question: "Will the implementation process disrupt my current operations?",
-      answer: "Our process is designed for minimal disruption. We start with a discovery call and strategy session to understand your unique needs. Implementation involves configuring and integrating the automation tools seamlessly with your existing systems. We handle the technical setup and provide training, ensuring a smooth transition.",
+      question: "Is this complicated to set up? We're busy and don't have a tech team.",
+      answer: "Not at all. We handle everything. From understanding your needs to building, launching, and managing your custom client acquisition system, our experts take care of the heavy lifting with minimal disruption to your agency." // Removed 'Done-For-You'
     },
     {
-      question: "What kind of results can I realistically expect ?",
-      answer: "While results vary, our clients typically see significant improvements in lead quality and quantity, reduced sales cycle times, increased marketing engagement, and substantial time savings for their teams. During our strategy session, we'll discuss potential ROI based on your specific goals and current processes.",
+      question: "What results can our agency expect from your lead generation systems?", // Removed DFY
+      answer: "Our B2B agency clients typically see a predictable flow of qualified leads, an end to inconsistent referrals, and more time to focus on billable work. This means sustainable growth and less stress about where the next client is coming from."
     },
     {
-      question: "Can you integrate with the CRM and marketing tools we already uses?",
-      answer: "Absolutely. We prioritize seamless integration. Our solutions are designed to work with popular CRMs, email marketing platforms, and other tools commonly used by agencies. We'll confirm compatibility and map out the integration plan during the strategy phase.",
+      question: "Our agency relies heavily on referrals. How can you help?",
+      answer: "Referrals are great, but often unpredictable. Our managed systems provide a proactive, scalable lead source to complement referrals, giving your B2B agency consistent growth opportunities and reducing dependency on sporadic client introductions." // Removed DFY
     },
     {
-      question: "What is your pricing structure?",
-      answer: "Given the personalize nature of our work that caters to each client specific need, we didn't feel comfortable advertising a clear pricing structure in our website, because that would be misleading. You can be assured that whatever it ends up being with you, it will be absolutely fair and reflective of the value provided to your company. If you absolutely wish to know, you can send us an email at 'support@standardops.dev' and we'll do our best to give you more information. Some clients projects are low 4 figures, some are high 4, some are low 5. It mostly depends on the scope and nature of the project. We hope this was satisfactory as a response.",
+      question: "What's the investment for a managed client acquisition system for my agency?", // Removed DFY
+      answer: "Our managed client acquisition systems are tailored to each B2B agency's specific needs and goals, so pricing is customized. We ensure it's fair and reflects the significant value and predictable growth we deliver. Projects can range based on scope, but we'll provide a clear proposal after understanding your requirements. Feel free to email 'support@standardops.dev' for a preliminary discussion." // Removed DFY
     },
   ];
 
@@ -152,7 +152,7 @@ const Index = () => {
         <FaqSection
           id="faq" // ID already exists
           title="Frequently Asked Questions"
-          description="Everything you need to know about our platform"
+          description="Your questions about achieving predictable B2B agency growth, answered."
           items={DEMO_FAQS}
           contactInfo={{
             title: "Still have questions?",

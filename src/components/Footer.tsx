@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import xLogo from './Untitled design.png'; // Import the latest X logo image
 
@@ -6,13 +5,13 @@ const Footer = () => {
   return (
     <footer className="bg-black border-t border-white/10 py-16 px-6 relative">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"> {/* Adjusted lg:grid-cols-4 to lg:grid-cols-3 */}
           <div>
             <div className="mb-6">
               <span className="text-2xl font-heading font-bold bg-gradient-to-r from-standardOps-purple to-[#FF7E5F] bg-clip-text text-transparent">Standard Ops</span>
             </div>
             <p className="text-white/60 mb-6">
-              Empowering businesses through intelligent automation solutions that save time and boost productivity.
+              Empowering B2B agencies with client acquisition systems for predictable growth. {/* Removed DFY */}
             </p>
             <div className="flex gap-4">
               {/* Use imported X logo and remove old Twitter icon */}
@@ -43,28 +42,19 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-4">Company</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-white/60 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="text-white/60 hover:text-white transition-colors">Careers</a></li>
-              <li><a href="#" className="text-white/60 hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="text-white/60 hover:text-white transition-colors">Pricing</a></li>
-              <li><a href="#" className="text-white/60 hover:text-white transition-colors">Contact</a></li>
+              <li><a href="#how-it-works" className="text-white/60 hover:text-white transition-colors">How It Works</a></li>
+              <li><a href="#testimonials" className="text-white/60 hover:text-white transition-colors">Testimonials</a></li>
+              <li><a href="/blog" className="text-white/60 hover:text-white transition-colors">Blog</a></li>
+              <li><a href="#faq" className="text-white/60 hover:text-white transition-colors">FAQ</a></li>
+              <li><a href="https://cal.com/safouan-chbabi/standardops-strategy" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
           
-          <div>
-            <h3 className="text-lg font-bold mb-4">Solutions</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-white/60 hover:text-white transition-colors">Marketing Automation</a></li>
-              <li><a href="#" className="text-white/60 hover:text-white transition-colors">Sales Automation</a></li>
-              <li><a href="#" className="text-white/60 hover:text-white transition-colors">Customer Support</a></li>
-              <li><a href="#" className="text-white/60 hover:text-white transition-colors">Data Management</a></li>
-              <li><a href="#" className="text-white/60 hover:text-white transition-colors">Custom Solutions</a></li>
-            </ul>
-          </div>
+          {/* Solutions Section Removed */}
           
           <div>
             <h3 className="text-lg font-bold mb-4">Subscribe</h3>
-            <p className="text-white/60 mb-4">Stay updated with the latest in automation technology.</p>
+            <p className="text-white/60 mb-4">Get insights on B2B agency growth and client acquisition.</p>
             <form className="flex flex-col gap-3">
               <input 
                 type="email" 

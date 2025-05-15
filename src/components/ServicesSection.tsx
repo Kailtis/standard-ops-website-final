@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Zap, ArrowRight, Rocket, BarChart3, Layers } from "lucide-react";
 import { GlareCard } from "@/components/ui/glare-card"; // Import GlareCard
@@ -42,20 +41,20 @@ const ServiceCard = ({
 const ServicesSection = () => {
   const services = [{
     icon: Zap,
-    title: "AI-Powered Automation",
-    description: "Implement intelligent automation systems that learn and adapt to your business processes, reducing manual work by up to 80%."
+    title: "Managed Lead Generation", // Changed from "DFY Lead Generation"
+    description: "Tired of manual outreach? Our AI systems find and qualify leads, delivering consistent opportunities so you can escape the 'feast or famine' cycle."
   }, {
     icon: Layers,
-    title: "Process Optimization",
-    description: "Streamline your marketing & sales processes through in-depth analysis and redesign of business workflows for maximum efficiency."
+    title: "Focus on Clients, Not Prospecting",
+    description: "We manage your top-of-funnel, allowing your team to concentrate on delivering exceptional client work and growing your agency."
   }, {
     icon: BarChart3,
-    title: "Data Integration",
-    description: "Connect disparate systems and data sources to create a unified view of your client acquisition pipelines and prospects interactions."
+    title: "Scalable Growth, Systematized",
+    description: "Reliant on referrals? Our systems provide a proactive source of new business, ending unpredictable lead flow and building sustainable growth."
   }, {
     icon: Rocket,
-    title: "Custom Solutions",
-    description: "Tailored automation strategies designed specifically for your unique business challenges and needs. We adapt, so you don't have to."
+    title: "Expert Systems, Zero Headaches",
+    description: "Lack lead gen expertise? We provide a fully managed client acquisition solution, taking the operational burden off your shoulders."
   }];
   
   return <section id="features" className="section relative overflow-hidden pt-20" style={{ // Changed pt-0 to pt-20
@@ -82,29 +81,27 @@ const ServicesSection = () => {
           opacity: 0,
           y: 20
         }} whileInView={{
-          opacity: 1,
-          y: 0
+          opacity: 1
         }} transition={{
           duration: 0.5,
           delay: 0.2
         }} viewport={{
           once: true
         }} className="text-4xl md:text-5xl font-heading font-bold mb-6">
-            Simplify Your Business with Smart <span className="gradient-text"> Marketing & Sales Automations</span>
+            End the Feast or Famine: Consistent Client Acquisition for Your B2B Agency
           </motion.h2>
           <motion.p initial={{
           opacity: 0,
           y: 20
         }} whileInView={{
-          opacity: 1,
-          y: 0
+          opacity: 1
         }} transition={{
           duration: 0.5,
           delay: 0.3
         }} viewport={{
           once: true
         }} className="text-xl text-white/70">
-            Reclaim valuable time and boost productivity with our cutting-edge automation solutions tailored for B2B companies and agencies.
+            Stop chasing leads and start focusing on what you do best. We deliver a steady stream of qualified opportunities directly to your B2B agency through our intelligent, managed client acquisition systems. {/* Changed Done-For-You to managed */}
           </motion.p>
         </div>
         

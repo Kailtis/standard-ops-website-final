@@ -5,24 +5,24 @@ import { GlowingEffect } from "@/components/ui/glowing-effect"; // Import Glowin
 const HowItWorks = () => {
   const steps = [{
     number: "01",
-    title: "Analyze",
-    description: "We conduct a thorough analysis of your current sales & marketing processes to identify the main constraints.",
-    benefits: ["Custom process mapping", "Efficiency gap analysis", "Technology infrastructure review"]
+    title: "Understand Your Agency's Needs",
+    description: "First, we dive deep to understand your agency's unique client acquisition challenges and growth goals. No generic solutions here.",
+    benefits: ["Pinpoint current lead generation bottlenecks.", "Identify your ideal client profile for targeted outreach.", "Map a clear path to predictable lead flow."]
   }, {
     number: "02",
-    title: "Design",
-    description: "Our experts design tailored automation solutions that integrate seamlessly within your existing systems.",
-    benefits: ["Customized workflow design", "AI integration planning", "User experience optimization"]
+    title: "Build Your Custom Lead Engine",
+    description: "We design a bespoke, AI-powered client acquisition system specifically for your agency, engineered to attract and qualify your ideal B2B clients.",
+    benefits: ["A system built for *your* agency, not a one-size-fits-all.", "Leverage AI for smarter, more effective outreach.", "Seamless integration with your existing tools."]
   }, {
     number: "03",
-    title: "Implement",
-    description: "We deploy and integrate your automation solutions with minimal disruption to your day-to-day operations.",
-    benefits: ["Seamless system integration", "Employee training", "Comprehensive documentation"]
+    title: "Launch & Activate Your Leads",
+    description: "Our team handles the full implementation, launching your new client acquisition system efficiently so you start seeing results, fast.",
+    benefits: ["Hassle-free setup, managed entirely by us.", "Minimal disruption to your agency's operations.", "Begin receiving qualified leads consistently."]
   }, {
     number: "04",
-    title: "Optimize",
-    description: "Continuous monitoring and refinement ensure your automation systems evolve with your business needs.",
-    benefits: ["Performance analytics", "Ongoing support", "Continuous improvement cycles"]
+    title: "Manage & Scale Your Growth",
+    description: "We don't just build and leave. We continuously manage and optimize your system, ensuring a steady flow of leads and adapting to keep your agency growing.",
+    benefits: ["Ongoing system management and optimization.", "Consistent results, month after month.", "Focus on your clients while we handle the lead flow."]
   }];
 
   return (
@@ -39,10 +39,10 @@ const HowItWorks = () => {
             How We Work
           </motion.p>
           <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }} className="text-4xl md:text-5xl font-heading font-bold mb-6">
-            Your Path to <span className="gradient-text">Effortless Client Acquisition</span>
+            From Client Chaos to Consistent Growth: <span className="gradient-text">Our Managed System in Action</span> {/* Removed DFY */}
           </motion.h2>
           <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }} viewport={{ once: true }} className="text-xl text-white/70">
-            Our in-depth approach makes implementing automation simple and effective, letting you focus on what matters most.
+            See how our managed client acquisition system transforms your lead generation from a constant struggle into a reliable growth engine, step-by-step. {/* Removed Done-For-You */}
           </motion.p>
         </div>
 
